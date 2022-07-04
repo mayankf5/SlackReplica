@@ -1,0 +1,174 @@
+.sidebar-2 {
+    grid-column: 2 / -1;
+    overflow: auto;
+    border-bottom: 0.1rem solid rgb(82, 38, 83)
+}
+@media (max-width: 806px) {
+    .sidebar-2 {
+        grid-column: 1/-1;
+      }
+}
+.sidebar-user {
+    color: #ffffff;
+    position: relative;
+    border-bottom: 0.1rem solid rgb(82, 38, 83)
+}
+.sidebar-user-info {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 0.1rem 0.5rem;
+    font-weight: bold;
+}
+  
+.sidebar-user-info h4 {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.sidebar-user-info-icon {
+    font-size: 0.5rem;
+}
+.sidebar-user-info-additional {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    color: #cfc3cf;
+}
+
+.sidebar-user-info-additional-icon {
+    color: #27AB71;
+    font-size: 0.5rem;
+    padding-right: 0.3rem;
+}
+.user-edit-icon {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border: 0.1rem solid #cfc3cf;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+.user-edit-icon-icon {
+    color: #3f0e40;
+}
+.unread {
+    border-bottom: 0.1rem solid rgb(67, 30, 68);
+}
+.unread-header {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    margin-top: 0.7rem;
+
+}
+.unread-header .unread-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+}
+.unread-header .unread-icons .line {
+    /* line-height: 0.3rem; */
+    background-color: white;
+    width: 10px;
+    height: 2px;
+    margin-bottom: 2px;
+}
+.unread ul {
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+.unread li {
+    padding: 0.25rem;
+}
+.unread ul a {
+    text-decoration: none;
+    color: #cfc3cf;
+    font-size: 0.8rem;
+}
+.unread ul FaCommentDots {
+    margin-right: 1rem;
+}
+.unread ul FaAt {
+    margin-right: 1rem;
+}
+.unread ul FaArrowDown {
+    margin-right: 1rem;
+}
+.channels {
+    border-bottom: 0.1rem solid rgb(67, 30, 68);
+}
+.channels-header {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    margin-top: 0.7rem;
+}
+.channels-header .faSortdown {
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+}
+.channels ul {
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .channels li {
+    padding: 0.25rem;
+  }
+  .channels ul a {
+    text-decoration: none;
+    color: #cfc3cf;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+  }
+  .red-online {
+    margin-left: auto;
+    margin-right: 1.2rem;
+    width: 1.2rem;
+    height: 0.8rem;
+    border: 0.1rem solid var #BC3057;
+    border-radius: 0.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #BC3057;
+    color: #ffffff;
+  }
+.channels ul .fahashtag {
+margin-right: 1rem;
+}
+.channels .font-highlight {
+color: #ffffff;
+}
+.facircle-online {
+    font-size: 0.5rem;
+  color: #27AB71;
+  margin-right: 1rem;
+}
+.active {
+    background-color: #376cdf;
+    font-weight: bold;
+  }
+  .channels .active > a {
+    font-size: 1rem;
+  }
+
+@media (max-width: 806px) {
+    .sidebar-2 {
+        grid-column: 1/-1;
+    }
+}
+@media (max-width: 724px) {
+    .sidebar-2 {
+        display: none;
+        }
+    }

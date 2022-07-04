@@ -1,0 +1,593 @@
+.chatbody {
+    grid-column: 2 / -1;
+    background-color: #ffffff;
+    border-right: 0.1rem solid rgba(29, 28, 29, 0.13);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    margin: 0;
+    font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+      height: 100%;
+    width: 100%;
+    height: 100%;
+    
+  }
+  .content {
+    grid-column: 1 / 1;
+    height: 100vh;
+    border-right: 0.1rem solid #cfc3cf;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 10rem;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer"
+      ;
+}
+.content-header {
+    /* position: fixed;
+    width: 48%; */
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 0.1rem solid #cfc3cf;
+    box-shadow: 0 0 0.2rem -0.2rem rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+.channel-content-header-details {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 0.1rem 1.5rem;
+  }
+.content-header-icons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4rem;
+}
+.channel-content-header-name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.channel-content-header-name FaStar {
+    font-size: 0.8rem;
+    color: #14619D;
+    margin-left: 0.5rem;
+}
+.content-header-icons {
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+}  
+.content-header-icons FaUser {
+    font-size: 0.8rem;
+    margin-right: 0.2rem;
+}
+.content-header-icons span {
+    margin-right: 0.8rem;
+    font-size: 0.8rem;
+  }
+.content-header-text {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+.info {
+    margin-left: auto;
+    margin-right: 1rem;
+    color: #9e9a9a;
+    cursor: pointer;
+}
+.feeds {
+    grid-area: main;
+    overflow: auto;
+    padding: 0.9275rem 0.3115rem 0.525rem 0.3125rem;
+}
+.feed {
+    display: flex;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
+  }
+.feeds-user-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+    position: relative;
+}
+.feeds-user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.325rem;
+}
+.feeds-user-avatar span {
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 0.1rem solid #e9a820;
+    border-radius: 0.275rem;
+    padding: 0.2rem;
+    box-shadow: 0 0 0 0.1rem hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9a820;
+    color: #ffffff;
+    position: absolute;
+    top: 1.5rem;
+    right: -0.3rem;
+}
+.feeds-user-info {
+    display: flex;
+    margin: 1.5rem 0;
+}
+.feed-user-info h4 {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+.feed-user-info h4 .time-stamp {
+    font-size: 0.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+.feed-user-info h4 .tag {
+    padding: 0.2rem 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    border-radius: 0.2rem;
+    background-color: #f8f8f8;
+    color: rgba(134, 134, 134, 1);
+    line-height: 2.6;
+    margin-right: 0.5rem;
+}
+.feed-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+.quoted {
+    border-left: 0.3rem solid rgb(7, 105, 185);
+  }
+.quoted h5 {
+    margin-left: 1rem;
+    color: rgb(7, 105, 185);
+    margin-bottom: 0.3rem;
+}
+.codeblock {
+    background-color: #3f0e40;
+    color: #ffffff;
+    padding: 0.2rem;
+    overflow-x: scroll;
+}
+.preparatory-text {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    margin-bottom: 0.2rem;
+}
+
+.preparatory-text FaSortDown {
+    margin-left: 0.3rem;
+    color: #9e9a9a;
+}
+.file-figure {
+    border: 0.1rem solid #cfc3cf;
+    padding: 0.8rem 20rem 0.8rem 0.8rem;
+    border-radius: 0.375rem;
+    display: flex;
+    /* width: 34.5rem; */
+}
+.file-figure FaFileAlt {
+    color: #27AB71;
+    margin-right: 2rem;
+}
+.file-detail {
+    display: flex;
+    flex-direction: column;
+  }
+.file-detail h5 {
+    font-weight: bold;
+    margin-bottom: 0.1rem;
+}
+.file-detail small {
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+.message-info {
+    display: flex;
+    align-items: center;
+}
+.message-info .zenith-org {
+    margin-right: 0.5rem;
+}
+.message-info strong {
+    font-weight: bold;
+}
+.zenith-org {
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 0.1rem solid #e9a820;
+    border-radius: 0.275rem;
+    padding: 0.2rem;
+    box-shadow: 0 0 0 0.1rem hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9a820;
+    color: #ffffff;
+}
+.form {
+    grid-area: footer;
+    height: 80%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.form .input {
+    width: 90%;
+    height: 40%;
+    margin-top: 2%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 0.6rem;
+    border-top-left-radius: 0.3125rem;
+    border-top-right-radius: 0.3125rem;
+    outline: none;
+    border-top: 0.0625rem solid #350d36;
+    border-left: 0.0625rem solid #350d36;
+    border-right: 0.0625rem solid #350d36;
+    border-bottom: none;
+    overflow: auto;
+}
+.input-toolbar-icons {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    position: absolute;
+    border-bottom-left-radius: 0.3125rem;
+    border-bottom-right-radius: 0.3125rem;
+    border: 0.0625rem solid rgba(29, 28, 29, 0.5);
+    top: 70%;
+    word-wrap: break-word;
+    font-weight: 300;
+}
+.input-toolbar-icons .move-right {
+    padding: 0.3rem 0.45rem;
+    margin-right: auto;
+    cursor: pointer;
+    color: rgba(134, 134, 134, 1);
+}
+.move-right > i:first-of-type {
+    border-right: 0.1rem solid rgba(97, 96, 97, 1);
+}
+.move-right {
+    margin-right: auto;
+    
+}
+.move-left {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    color: rgba(134, 134, 134, 1);
+}
+.btn-borderless {
+    border: none;
+    background-color: inherit;
+    border-radius: 0.5rem;
+    padding: 0;
+  }
+.button:hover {
+    background-color: #3eb991;
+}
+.right-sidebar {
+    overflow: auto;
+}
+.right-sidebar section {
+    border-bottom: 0.1rem solid #cfc3cf;
+}
+.right-sidebar-header {
+    display: flex;
+    align-items: center;
+}
+.right-sidebar-header-details {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 0.1rem 1.5rem;
+}
+.right-sidebar-header-details h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.right-sidebar-header-details p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-bottom: 0.6rem;
+}
+.right-sidebar-header .fatimes {
+    margin-left: auto;
+    color: #cfc3cf;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+.right-sidebar-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9375rem 0.3125rem 0.625rem 0.3125rem;
+}
+.right-sidebar-contact-details {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.right-sidebar-contact-details span {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    color: rgba(97, 96, 97, 1);
+    color: black;
+    margin-bottom: 0.2rem;
+}
+.right-sidebar-contact-details span FaUserPlus {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+  
+.right-sidebar-contact-details span FaSearchPlus {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+  
+.right-sidebar-contact-details span FaPhone {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+  
+.right-sidebar-contact-details span FaEllipsisH {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.right-sidebar-contact-details p {
+    color: black;
+}
+.right-sidebar-about {
+    margin-bottom: 1rem;
+}
+.about-header {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 0.1rem 1.5rem;
+}
+.about-header h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.about-header FaChevronDown {
+    margin-left: auto;
+    color: #cfc3cf;
+    margin-right: 1rem;
+    font-size: 0.8rem;
+}
+.about-details {
+    padding: 0.3rem 0.5rem;
+    margin: 0.5rem 1rem;
+    background-color: #f8f8f8;
+    border-radius: 0.625rem;
+    color: rgba(97, 96, 97, 1);
+}
+.about-detail {
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+.about-detail h5 {
+    margin-bottom: 0.2rem;
+    color: #9e9a9a;
+}
+.about-img {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.about-img-wrapper {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+  }
+.about-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.325rem;
+}
+.about-img small {
+    font-size: 0.8rem;
+}
+.other-section-header {
+    display: flex;
+    align-items: flex-start;
+    margin: 1rem 0 0.1rem 1.5rem;
+}
+.other-section-header h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+.other-section-header div {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    color: #cfc3cf;
+    margin-right: 1rem;
+    font-size: 0.8rem;
+}
+.other-section-header div span {
+    margin-right: 0.5rem;
+}
+.other-section-header div FaChevronRight {
+    margin-left: 0.5rem;
+}
+p.quoted-text {
+    padding-left: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1250px) {
+    body {
+      grid-template-columns: 1.5fr;
+    }
+    .content {
+      grid-column: 1 / -1;
+    }
+    .right-sidebar {
+      display: none;
+    }
+  }
+  @media (max-width: 918px) {
+    .file-figure {
+      padding: 0.8rem 15rem 0.8rem 0.8rem;
+    }
+  }
+  @media (max-width: 834px) {
+    .file-figure {
+      padding: 0.8rem 12rem 0.8rem 0.8rem;
+    }
+  }
+@media (max-width: 806px) {
+    .input-toolbar-icons {
+        padding: 0.2rem 0.3rem;
+    }
+    .input-toolbar-icons i {
+        padding: 0.3rem 0.3rem;
+    }
+}
+@media (min-width: 800px) {
+    .feeds {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+@media (max-width: 786px) {
+    .file-figure {
+      padding: 0.8rem 10rem 0.8rem 0.8rem;
+    }
+}
+@media (max-width: 754px) {
+    .file-figure {
+    padding: 0.8rem 8rem 0.8rem 0.8rem;
+    }
+}
+@media (max-width: 724px) {
+    .main {
+        grid-template-columns: 1fr;
+      }
+    body {
+        grid-column: 1 / -1;
+      }
+}
+@media (max-width: 495px) {
+    .file-figure {
+    padding: 0.8rem 5rem 0.8rem 0.8rem;
+    }
+  }
+@media (max-width: 466px) {
+    .input-toolbar-icons {
+    font-size: 0.8rem;
+    padding: 0.2rem;
+}
+.input-toolbar-icons i {
+    padding: 0.2rem;
+    }
+}
+@media (max-width: 414px) {
+    .file-figure {
+      padding: 0.8rem;
+}
+    .file-detail h5 {
+      font-size: 0.8rem;
+    }
+}
+@media (max-width: 358px) {
+    .input-toolbar-icons {
+    font-size: 0.8rem;
+    padding: 0.1rem;
+}
+.input-toolbar-icons .move-right {
+      padding: 0.1rem;
+    }
+}
+@media (max-width: 326px) {
+.content-header-icons FaUser FaThumbtack {
+    font-size: 0.7rem;
+    margin-right: 0.1rem;
+}
+.content-header-icons span {
+    margin-right: 0.5rem;
+    font-size: 0.7rem;
+}
+.content-header-text {
+    font-size: 0.7rem;
+}
+.feed-text {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+.quoted h5 {
+    font-size: 0.9rem;
+}
+.quoted-text {
+    font-size: 0.8rem;
+}
+}
+@media (max-width: 324px) {
+    .file-figure {
+      padding: 0.5rem;
+    }
+    .file-figure FaFileAlt {
+      margin-right: 0.5rem;
+    }
+    .right-sidebar-contact-details {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+    .right-sidebar-contact-details span {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    .right-sidebar-contact-details span FaUserPlus FaSearchPlus FaPhone FaEllipsisH {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    .about-detail {
+      margin: 0.3rem;
+      padding: 0.2rem;
+    }
+    .channel-right-sidebar {
+      right: -15rem;
+      width: 15rem;
+    }
+    .channel-sidebar-display {
+      right: 0;
+    }
+}
